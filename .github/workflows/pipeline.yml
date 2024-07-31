@@ -1,18 +1,20 @@
-name: Deploy storybook
+name: Deploy
+
 on:
   push:
     branches:
-      - master
-
+      - main
 
 jobs:
   deploy:
-    name: Deploy storybook
+    name: Deploy
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/setup-node@v2
         with:
           node-version: '18'
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
@@ -24,27 +26,17 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Upload to Chromatic
-        uses: chromaui/action@v1
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          token: ${{ secrets.TOKEN_GITHUB }}
-          buildScriptName: build:storybook
-
-      - name: Build storybook
-        run: npm run build:storybook
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.TOKEN_GITHUB }}
-          BRANCH: storybook
-          FOLDER: .storybook-out
-
-      - name: Build sass and typescript
+      - name: Build
         run: |
           npm run build:typescript
           npm run build:sass
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+          BRANCH: gh-pages
+          FOLDER: dist
 
       - name: Release
         run: npm run release
