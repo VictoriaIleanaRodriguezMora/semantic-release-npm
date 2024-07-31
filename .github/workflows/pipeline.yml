@@ -1,25 +1,27 @@
-name: Deploy storybook
+name: Deploy and Release
+
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
-          
+          node-version: '18' # Actualiza a Node.js 18 para compatibilidad
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci # Usa npm ci para una instalación limpia
 
       - name: Lint
         run: npm run lint
@@ -35,7 +37,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.TOKEN_GITHUB }}
           BRANCH: storybook
           FOLDER: .storybook-out
 
@@ -45,7 +47,7 @@ jobs:
           npm run build:sass
 
       - name: Release
-        run: npm run release
+        run: npx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.TOKEN_GITHUB }} # Usa GH_TOKEN en lugar de TOKEN_GITHUB
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
