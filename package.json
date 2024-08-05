@@ -1,6 +1,6 @@
 {
   "name": "@victoria0117/reactobelisco",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Libreria de componentes Obelisco basado en React js.",
   "type": "module",
   "scripts": {
@@ -9,9 +9,10 @@
     "lint": "eslint .",
     "lint-fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
-    "dev" : "cd front && npm run dev",
+    "dev": "cd front && npm run dev",
     "build": "cd front && npm run build",
-    "start" : "cd front && npm run start"
+    "start": "cd front && npm run start",
+    "semantic-release": "semantic-release --branches main"
   },
   "author": "vc",
   "license": "ISC",
@@ -41,7 +42,8 @@
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.69.5",
     "ts-jest": "^29.1.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "semantic-release": "^24.0.0"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -60,7 +62,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gcba/react-obelisco",
+    "url": "https://github.com/VictoriaIleanaRodriguezMora/semantic-release-npm.git",
     "directory": "src"
   },
   "dependencies": {
