@@ -10,7 +10,9 @@
     "lint-fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write .",
     "dev": "cd front && npm run dev",
-    "build": "cd front && npm run build",
+    "build": "npm run build:typescript && npm run build:sass",
+    "build:typescript": "tsc",
+    "build:sass": "sass src/styles:dist/styles",
     "start": "cd front && npm run start",
     "semantic-release": "semantic-release --branches main"
   },
@@ -57,7 +59,7 @@
   },
   "release": {
     "branches": [
-      "master"
+      "main"
     ]
   },
   "repository": {
