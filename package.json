@@ -35,15 +35,15 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "rollup": "^4.2.0",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-glob-import": "^0.5.0",
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.69.5",
+    "semantic-release": "^24.0.0",
     "ts-jest": "^29.1.2",
-    "typescript": "^5.2.2",
-    "semantic-release": "^24.0.0"
+    "typescript": "^5.2.2"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -68,7 +68,9 @@
   "dependencies": {
     "classnames": "^2.3.2",
     "eslint-config-prettier": "^9.0.0",
+    "next": "^14.2.5",
     "prettier": "^3.1.0",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^6.20.0"
   }
 }
