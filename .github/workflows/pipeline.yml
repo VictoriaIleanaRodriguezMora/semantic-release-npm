@@ -33,7 +33,6 @@ jobs:
 
       - name: Build
         run: |
-          npm run build:typescript
           npm run build:sass
 
       - name: Release
