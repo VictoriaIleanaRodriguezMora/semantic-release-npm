@@ -34,21 +34,3 @@ lorem ipsum dolor sit am lorem ipsum dolor sit amlorem ipsum dolor sit am lorem 
 
 lorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit am
 
-## Installation
-
-lorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit am
-
-```sh
-# with Yarn
-$ yarn add lorem ipsum dolor sit amlorem ipsum dolor sit am
-
-# with npm
-$ npm i lorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit am
-
-# with pnpm
-$ pnpm add lorem ipsum dolor sit amlorem ipsum dolor sit am
-
-# with Bun
-$ bun add lorem ipsum dolor sit amlorem ipsum dolor sit amlorem ipsum dolor sit am
-```
-
