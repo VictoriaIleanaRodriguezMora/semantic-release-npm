@@ -58,7 +58,8 @@
   "release": {
     "branches": [
       "main"
-    ]
+    ],
+    "updateMajorTag": true
   },
   "repository": {
     "type": "git",
