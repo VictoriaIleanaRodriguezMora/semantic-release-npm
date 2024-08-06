@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -26,7 +26,7 @@ jobs:
           node-version: '18'
 
       - name: Update npm
-        run: npm install -g npm@latest
+        run: npm install npm@8.11.0
 
       - name: Install dependencies
         run: npm install
@@ -43,7 +43,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -51,7 +51,7 @@ jobs:
           node-version: '18'
 
       - name: Update npm
-        run: npm install -g npm@latest
+        run: npm install npm@8.11.0
 
       - name: Install dependencies
         run: npm install
