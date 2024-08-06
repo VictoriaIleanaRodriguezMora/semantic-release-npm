@@ -1,7 +1,4 @@
-export {default as Access} from "./Access";
-export {default as AccessContent} from "./Access/AccessContent";
-export {default as AccessDescription} from "./Access/AccessDescription";
-export {default as AccessTitle} from "./Access/AccessTitle";
+
 export {default as Alert} from "./Alert";
 export {default as Audio} from "./Audio";
 export {default as Banner} from "./Banner";
