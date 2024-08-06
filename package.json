@@ -11,8 +11,7 @@
     "format": "prettier --write .",
     "dev": "cd front && npm run dev",
     "build": "cd front && npm run build",
-    "start": "cd front && npm run start",
-    "semantic-release": "semantic-release --branches main"
+    "start": "cd front && npm run start"
   },
   "author": "vc",
   "license": "ISC",
